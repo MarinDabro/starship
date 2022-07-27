@@ -8,6 +8,7 @@ $character """
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
 
+add_newline = true
 # Disable the blank line at the start of the prompt
 
 [battery]
@@ -20,7 +21,7 @@ threshold = 20
 style = "bold red"
 
 [character]
-success_symbol = "[-->](bold blue)"
+success_symbol = "[-->](bold cyan)"
 error_symbol = "[-->](bold red) "
 
 [cmd_duration]
@@ -30,15 +31,15 @@ format = " took [$duration]($style)"
 [directory]
 truncation_length = 5
 format = "[$path]($style)[$lock_symbol]($lock_style) "
-style = "bold white"
+style = "bold dimmed white"
 
 [git_branch]
 format = "[# $branch]($style) "
-style = "bright-yellow"
+style = "bright-blue"
 
 [git_commit]
 commit_hash_length = 8
-style = "bold white"
+style = "bold dimmed white"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
@@ -54,7 +55,7 @@ modified = "📝 × ${count}"
 staged = "🗃️  ×${count}"
 renamed = "📛 ×${count}"
 deleted = "🗑️  ×${count}"
-style = "bright-yellow"
+style = "bright-blue"
 format = "[$modified]($style) "
 
 [hostname]
@@ -75,11 +76,11 @@ disabled = true
 
 [time]
 time_format = "%H:%M"
-format = "$time($style) "
+format = "$time($style)"
 style = "bright-white"
 disabled = false
 
 [username]
 format = "[$user]($style) "
-style_user = "bold blue"
+style_user = "cyan"
 show_always = true
