@@ -21,7 +21,7 @@ threshold = 20
 style = "bold red"
 
 [character]
-success_symbol = "[-->](bold cyan)"
+success_symbol = "[-->](bold blue)"
 error_symbol = "[-->](bold red) "
 
 [cmd_duration]
@@ -83,5 +83,5 @@ disabled = false
 
 [username]
 format = "[$user]($style) "
-style_user = "bold cyan"
+style_user = "bold blue"
 show_always = true
