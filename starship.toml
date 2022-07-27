@@ -30,12 +30,13 @@ format = " took [$duration]($style)"
 
 [directory]
 truncation_length = 5
+truncation_symbol = "…/"
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 style = "bold dimmed white"
 
 [git_branch]
-format = "[# $branch]($style) "
-style = "bright-blue"
+format = "[| $branch]($style) "
+style = "bold bright-blue"
 
 [git_commit]
 commit_hash_length = 8
@@ -51,7 +52,7 @@ behind = "🐢 ×${count}"
 diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
 untracked = "🛤️  ×${count}"
 stashed = "📦 "
-modified = "📝 × ${count}"
+modified = "Δ~${count}"
 staged = "🗃️  ×${count}"
 renamed = "📛 ×${count}"
 deleted = "🗑️  ×${count}"
@@ -82,5 +83,5 @@ disabled = false
 
 [username]
 format = "[$user]($style) "
-style_user = "cyan"
+style_user = "bold cyan"
 show_always = true
