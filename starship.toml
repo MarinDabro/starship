@@ -2,7 +2,7 @@
 
 # Use custom format
 format = """
-$username$directory$git_branch$git_status
+$username$directory$git_branch$git_status$cmd_duration
 $character """
 
 # Wait 10 milliseconds for starship to check files under the current directory.
@@ -25,8 +25,8 @@ success_symbol = "[-->](bold blue)"
 error_symbol = "[-->](bold bright-red) "
 
 [cmd_duration]
-min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
-format = " took [$duration]($style)"
+min_time = 0  # Show command duration over 10,000 milliseconds (=10 sec)
+format = "[$duration]($style)"
 
 [directory]
 truncation_length = 5
@@ -52,7 +52,7 @@ behind = "🐢 ×${count}"
 diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
 untracked = "🛤️  ×${count}"
 stashed = "📦 "
-modified = "Δ~${count}"
+modified = "Δ~${count} "
 staged = "🗃️  ×${count}"
 renamed = "📛 ×${count}"
 deleted = "🗑️  ×${count}"
